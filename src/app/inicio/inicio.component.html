@@ -35,7 +35,7 @@
 
         <!-- HOME -->
         <div class="tab-pane fade show active justify-content-center" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-          <h1 class="text-center br-10 mt-3 text-shadow">Feed inicial</h1>
+          <h1 class="text-center br-10 mt-3 text-shadow">Feed Inicial</h1>
 
           <div class="row d-flex justify-content-center my-5">
             <div class="col-md-6">
@@ -80,7 +80,7 @@
 
         <!-- Minhas postagens -->
         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-          <h1 class="text-center br-10 mt-3 text-shadow">Suas postagens</h1>
+          <h1 class="text-center br-10 mt-3 text-shadow">Suas Postagens</h1>
           <div class="card br-10 mt-5 mb-5 justify-content-center"
             *ngFor='let item of user.postagem | orderBy : key : reverse'>
             <div class="card-body p-1 sombrabox br-10">
@@ -109,9 +109,9 @@
         <!-- Postagens por tema -->
 
         <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-          <h1 class="text-center br-10 mt-3 text-shadow">Postagens por tema</h1>
+          <h1 class="text-center br-10 mt-3 text-shadow">Postagens por Tema</h1>
           <div class="form-group">
-            <h3 for="tema" class="text-center my-5">Escolha o tema</h3>
+            <h3 for="tema" class="text-center my-5">Escolha o tema:</h3>
             <select class="form-control" [(ngModel)]="idTema" (change)="findByIdTema()" name="tema" id="tema">
               <option *ngFor='let item of listaTemas' value="{{item.id}}">
                 {{ item.descricao }}

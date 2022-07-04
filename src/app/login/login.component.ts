@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
-import { AppComponent } from '../app.component';
 import { Userlogin } from '../model/UserLogin';
 import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
@@ -38,6 +37,7 @@ export class LoginComponent implements OnInit {
       this.userLogin.foto
 
       this.router.navigate(['/inicio'])
+      this.alertas.showAlertInfo('Seja bem-vindo(a)!')
     }, error: (erro) => {
       if (erro.status == 500 || erro.status == 401) {
         this.alertas.showAlertDanger('Usuário ou senha estão incorretos!')
